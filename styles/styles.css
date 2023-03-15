@@ -10,43 +10,29 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
+/* buttons */
+/* buttons */
+/* section metadata */
 :root {
-  /* colors */
   --link-color: #035fe6;
   --link-hover-color: #136ff6;
   --background-color: #fff;
   --overlay-background-color: #eee;
   --highlight-background-color: #ccc;
   --text-color: #000;
-  /* fonts */
   --body-font-family: "helvetica neue", helvetica, ubuntu, roboto, noto, sans-serif;
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: "Roboto Mono", menlo, consolas, "Liberation Mono", monospace;
-  /* body sizes */
   --body-font-size-m: 22px;
   --body-font-size-s: 18px;
   --body-font-size-xs: 16px;
-
-  /* heading sizes */
   --heading-font-size-xxl: 48px;
   --heading-font-size-xl: 40px;
   --heading-font-size-l: 32px;
   --heading-font-size-m: 24px;
   --heading-font-size-s: 20px;
   --heading-font-size-xs: 18px;
-  /* nav height */
   --nav-height: 64px;
-}
-
-@media (min-width: 900px) {
-  :root {
-    --heading-font-size-xxl: 60px;
-    --heading-font-size-xl: 48px;
-    --heading-font-size-l: 36px;
-    --heading-font-size-m: 30px;
-    --heading-font-size-s: 24px;
-    --heading-font-size-xs: 22px;
-  }
 }
 
 body {
@@ -62,41 +48,98 @@ header {
   height: var(--nav-height);
 }
 
-h1, h2, h3,
-h4, h5, h6 {
+h1 {
   font-family: var(--heading-font-family);
   font-weight: 600;
   line-height: 1.25;
   margin-top: 1em;
   margin-bottom: 0.5em;
   scroll-margin: calc(var(--nav-height) + 1em);
-}
-
-h1 {
   font-size: var(--heading-font-size-xxl);
 }
 
 h2 {
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  scroll-margin: calc(var(--nav-height) + 1em);
   font-size: var(--heading-font-size-xl);
 }
 
 h3 {
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  scroll-margin: calc(var(--nav-height) + 1em);
   font-size: var(--heading-font-size-l);
 }
 
 h4 {
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  scroll-margin: calc(var(--nav-height) + 1em);
   font-size: var(--heading-font-size-m);
 }
 
 h5 {
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  scroll-margin: calc(var(--nav-height) + 1em);
   font-size: var(--heading-font-size-s);
 }
 
 h6 {
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  scroll-margin: calc(var(--nav-height) + 1em);
   font-size: var(--heading-font-size-xs);
 }
 
-p, dl, ol, ul, pre, blockquote {
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+dl {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+ol {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+ul {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+pre {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: var(--fixed-font-family);
+  font-size: var(--body-font-size-s);
+  overflow: scroll;
+  font-family: var(--fixed-font-family);
+  font-size: var(--body-font-size-s);
+  overflow: scroll;
+}
+
+blockquote {
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -108,89 +151,30 @@ hr {
   border-bottom: 1px solid var(--overlay-background-color);
 }
 
-code, pre, samp {
+code {
   font-family: var(--fixed-font-family);
   font-size: var(--body-font-size-s);
+  padding: 0.125em;
+  font-family: var(--fixed-font-family);
+  font-size: var(--body-font-size-s);
+  padding: 0.125em;
 }
 
-code, samp {
-  padding: .125em;
-}
-
-pre {
-  overflow: scroll;
+samp {
+  font-family: var(--fixed-font-family);
+  font-size: var(--body-font-size-s);
+  padding: 0.125em;
+  font-family: var(--fixed-font-family);
+  font-size: var(--body-font-size-s);
+  padding: 0.125em;
 }
 
 main pre {
   background-color: var(--overlay-background-color);
   padding: 1em;
-  border-radius: .25em;
+  border-radius: 0.25em;
   overflow-x: auto;
   white-space: pre;
-}
-
-a:any-link {
-  color: var(--link-color);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: var(--link-hover-color);
-}
-
-/* buttons */
-a.button:any-link, button {
-  font-family: var(--body-font-family);
-  display: inline-block;
-  box-sizing: border-box;
-  text-decoration: none;
-  border: 2px solid transparent;
-  padding: 5px 30px;
-  text-align: center;
-  font-style: normal;
-  font-weight: 600;
-  cursor: pointer;
-  color: var(--background-color);
-  background-color: var(--link-color);
-  margin: 16px 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border-radius: 30px;
-}
-a.button:focus, a.button:hover, a button:focus, a button:hover {
-  background-color: var(--link-hover-color);
-  cursor: pointer;
-}
-
-code, pre, samp {
-  font-family: var(--fixed-font-family);
-  font-size: var(--body-font-size-s);
-}
-
-code, samp {
-  padding: 0.125em;
-}
-
-pre {
-  overflow: scroll;
-}
-
-/* buttons */
-button:disabled, button:hover {
-  background-color: var(--overlay-background-color);
-  cursor: unset;
-}
-
-a.button.secondary, button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color)
-}
-
-main {
-  /* progressive section appearance */
 }
 main input {
   font-size: 1.25rem;
@@ -227,36 +211,124 @@ main img {
   width: auto;
   height: auto;
 }
+main .section {
+  padding: 64px 16px;
+}
+main .section.highlight {
+  background-color: var(--highlight-background-color);
+}
+
+a:any-link {
+  color: var(--link-color);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: var(--link-hover-color);
+}
+a button:focus {
+  background-color: var(--link-hover-color);
+  cursor: pointer;
+}
+a button:hover {
+  background-color: var(--link-hover-color);
+  cursor: pointer;
+}
+
+a.button:any-link {
+  font-family: var(--body-font-family);
+  display: inline-block;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: 2px solid transparent;
+  padding: 5px 30px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--background-color);
+  background-color: var(--link-color);
+  margin: 16px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 30px;
+}
+a.button:focus {
+  background-color: var(--link-hover-color);
+  cursor: pointer;
+}
+a.button:hover {
+  background-color: var(--link-hover-color);
+  cursor: pointer;
+}
+
+button {
+  font-family: var(--body-font-family);
+  display: inline-block;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: 2px solid transparent;
+  padding: 5px 30px;
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--background-color);
+  background-color: var(--link-color);
+  margin: 16px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 30px;
+}
+button:disabled {
+  background-color: var(--overlay-background-color);
+  cursor: unset;
+}
+button:hover {
+  background-color: var(--overlay-background-color);
+  cursor: unset;
+}
+
+a.button.secondary {
+  background-color: unset;
+  border: 2px solid currentcolor;
+  color: var(--text-color);
+}
+
+button.secondary {
+  background-color: unset;
+  border: 2px solid currentcolor;
+  color: var(--text-color);
+}
 
 .icon {
   display: inline-block;
   height: 24px;
   width: 24px;
 }
-
 .icon svg {
   height: 100%;
   width: 100%;
 }
 
-main .section {
-  padding: 64px 16px;
-}
-
-@media (min-width: 600px) {
-  main .section {
-    padding: 64px 32px;
-  }
-}
-
 @media (min-width: 900px) {
+  :root {
+    --heading-font-size-xxl: 60px;
+    --heading-font-size-xl: 48px;
+    --heading-font-size-l: 36px;
+    --heading-font-size-m: 30px;
+    --heading-font-size-s: 24px;
+    --heading-font-size-xs: 22px;
+  }
   .section > div {
     max-width: 1200px;
     margin: auto;
   }
 }
-
-/* section metadata */
-main .section.highlight {
-  background-color: var(--highlight-background-color);
+@media (min-width: 600px) {
+  main .section {
+    padding: 64px 32px;
+  }
 }
