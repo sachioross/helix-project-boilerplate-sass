@@ -2,20 +2,17 @@
   display: flex;
   flex-direction: column;
 }
-.columns img {
-  width: 100%;
-}
-
 .columns > div > div {
   order: 1;
 }
-
 .columns > div > .columns-img-col {
   order: 0;
 }
-
 .columns > div > .columns-img-col img {
   display: block;
+}
+.columns img {
+  width: 100%;
 }
 
 @media (min-width: 900px) {
@@ -24,7 +21,6 @@
     flex-direction: unset;
     gap: 32px;
   }
-
   .columns > div > div {
     flex: 1;
     order: unset;
